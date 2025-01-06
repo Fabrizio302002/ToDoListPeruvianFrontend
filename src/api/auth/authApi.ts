@@ -43,6 +43,7 @@ export const login = async (loginRequest: {
 // Función para registrar un nuevo usuario
 export const register = async (userData: User) => {
   // interfaz User
+  // eslint-disable-next-line no-useless-catch
   try {
     const response = await axios.post(`${apiUrl}/register`, userData);
     return response;
