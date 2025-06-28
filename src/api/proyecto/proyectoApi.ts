@@ -2,7 +2,7 @@ import axios from "axios";
 import { Proyecto } from "../../types/Proyecto";
 
 const apiUrl =
-  "https://todolistperuvianbackend-production-401d.up.railway.app/api/proyectos";
+  "https://todolistperuvianbackend-production-71e7.up.railway.app/api/proyectos";
 
 // Función para registrar un proyecto
 export const registrarProyecto = async (proyectoData: Proyecto) => {

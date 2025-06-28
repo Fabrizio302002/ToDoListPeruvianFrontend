@@ -3,7 +3,7 @@ import { User } from "../../types/User";
 
 // URL base para tu API
 const apiUrl =
-  "https://todolistperuvianbackend-production-401d.up.railway.app/api/user";
+  "https://todolistperuvianbackend-production-71e7.up.railway.app/api/user";
 
 // Función para Login
 export const login = async (loginRequest: {
