@@ -39,14 +39,24 @@ export function TaskFormButtons({
     }
   };
 
-  const formatDate = (date: string) => {
-    const today = new Date().toISOString().split("T")[0];
-    if (date === today) return "Hoy";
-    return new Date(date).toLocaleDateString("es-ES", {
+  const formatDate = (dateString: string) => {
+    const today = new Date();
+    const [year, month, day] = dateString.split("-").map(Number);
+    const localDate = new Date(year, month - 1, day);
+  
+    const isToday =
+      today.getFullYear() === localDate.getFullYear() &&
+      today.getMonth() === localDate.getMonth() &&
+      today.getDate() === localDate.getDate();
+  
+    if (isToday) return "Hoy";
+  
+    return localDate.toLocaleDateString("es-PE", {
       day: "numeric",
       month: "short",
     });
   };
+  
 
   return (
     <div className="task-form-buttons">

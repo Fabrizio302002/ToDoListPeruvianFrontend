@@ -24,6 +24,7 @@ interface TareaFormValues extends Omit<Tarea, "idProyecto"> {
   idProyecto: number;
 }
 
+
 const TareaForm: React.FC<TareaFormProps> = ({ onClose, projectId }) => {
   const [showPrioritySelect, setShowPrioritySelect] = useState(false);
   const [showStateSelect, setShowStateSelect] = useState(false);
